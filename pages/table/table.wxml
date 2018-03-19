@@ -1,0 +1,19 @@
+<!--pages/table/table.wxml-->
+<view class="container">
+    <view class="table">
+        <view class="tr">
+            <view class="th">标题1</view>
+            <view class="th">标题2</view>
+            <view class="th">标题3</view>
+            <view class="th">标题4</view>
+            <view class="th">标题5</view>
+        </view>
+        <view class="tr" wx:for="{{10}}" wx:key="unique">
+            <view class="td">{{item}}</view>
+            <view class="td">{{item}}</view>
+            <view class="td">{{item}}</view>
+            <view class="td">{{item}}</view>
+            <view class="td">{{item}}</view>
+        </view>
+    </view>
+</view>

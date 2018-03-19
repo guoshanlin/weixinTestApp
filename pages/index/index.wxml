@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="section">
+    <view class="flex-wrp" wx:for="{{pathRouter}}" wx:key="unique" bindtap="toOtherPages" data-url="{{item.url}}">
+      <view class="flex-item">
+           <view class="item-title">{{item.name}}</view>
+            <text class="item-icon">></text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="usermotto">
+    <button type="primary" bindtap="toTestPage" class="to-test">跳转到测试页</button>
+  </view>
+  <view class="usermotto">
+    <button type="primary" bindtap="toTabPage" class="to-test">跳转到tab页</button>
+  </view>
+    <view class="usermotto">
+    <button type="primary" bindtap="toCityPage" class="to-test">跳转到城市页</button>
+  </view> -->
+</view>

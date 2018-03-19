@@ -1,0 +1,10 @@
+/* pages/test/test.wxss */
+.bc_green{
+  background-color: #22D68C
+}
+.bc_red{
+background-color: #F73448
+}
+.bc_blue{
+  background-color: #31A4F7
+}
